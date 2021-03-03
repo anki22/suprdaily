@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <style>
+        .list-wrapper{
+            display: flex;
+        }
+        .list {
+            max-width: 400px;
+            flex-grow: 1;
+            border: 1px solid black;
+            min-height: 500px;
+            position: relative;
+            margin: 10px;
+            padding-bottom: 70px;
+        }
+        .list-content {
+            height: calc(100% - 100px);
+        }
+        button {
+            background: none;
+    border: 1px solid black;
+    border-radius: 3px;
+    height: 30px;
+    cursor: pointer;
+        }
+        .hide.hide.hide {
+            display: none;
+        }
+        .text-right{
+            text-align: right;
+        }
+        .list-header {
+            border-bottom: 1px solid black;
+            font-size: 24px;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .popup {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            border: 1px solid #ccc;
+            height: 100px;
+            width: 400px;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;;
+        }
+        .add-icon {
+            position: absolute;
+            bottom: 10px;
+            font-size: 40px;
+            border: 1px solid black;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .card {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+        .card h3 {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="actions text-right">
+            <button class="add-list-button">ADD LIST</button>
+        </div>
+        <div class="list-wrapper">
+            
+        </div>
+    </div>
+    <div class="list-popup hide popup">
+        <div>
+            <input type="text" placeholder="Enter list title" class="list-title">
+        <button class="form-add-list">ADD LIST</button>
+        </div>
+    </div>
+    <div class="card-popup hide popup">
+       <div>
+        <input type="text" placeholder="Enter card title" class="card-title">
+        <input type="text" placeholder="Enter card description" class="card-desc">
+        <button class="form-add-card">ADD CARD</button>
+       </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
